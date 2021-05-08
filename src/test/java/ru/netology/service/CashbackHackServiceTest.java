@@ -1,16 +1,16 @@
 package ru.netology.service;
 
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
     CashbackHackService Cashback = new CashbackHackService();
 
 
     @Test
-    void shouldCashbackServiceIf0() {
+    public void shouldCashbackServiceIf0() {
 
         int actual = Cashback.remain(0);
         int expected = 1000;
@@ -18,7 +18,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldAskAddSum1() {
+    public void shouldAskAddSum1() {
 
         int actual = Cashback.remain(10);
         int expected = 990;
@@ -26,7 +26,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldAskAddSum2() {
+    public void shouldAskAddSum2() {
 
         int actual = Cashback.remain(500);
         int expected = 500;
@@ -34,7 +34,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldAskAddSum3() {
+    public void shouldAskAddSum3() {
 
         int actual = Cashback.remain(910);
         int expected = 90;
@@ -42,7 +42,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldNotAskAddSum1() {
+    public void shouldNotAskAddSum1() {
 
         int actual = Cashback.remain(1000);
         int expected = 0;
@@ -50,7 +50,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldAskAddSum4() {
+    public void shouldAskAddSum4() {
 
         int actual = Cashback.remain(1100);
         int expected = 900;
@@ -58,7 +58,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldNotAskAddSum2() {
+    public void shouldNotAskAddSum2() {
 
         int actual = Cashback.remain(2000);
         int expected = 0;
